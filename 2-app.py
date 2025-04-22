@@ -18,6 +18,7 @@ hide_icons = """
 <style>
 #MainMenu {visibility: hidden;}
 #iconButtonLabel {visibility: hidden;}
+.stAppHeader {visibility: hidden;}
 .st-emotion-cache-1wbqy5l {visibility: hidden;}
 </style>
 """
