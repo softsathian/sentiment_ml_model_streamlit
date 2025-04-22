@@ -28,15 +28,13 @@ def download_dir(local_path, s3_prefix):
                 # os.makedirs(os.path.dirname(local_file), exist_ok=True)
 
                 s3.download_file(bucket_name, s3_key, local_file)
+st.title("Sentiment ML Model")
 
 button_placeholder = st.empty()
 
 if button_placeholder.button("Download Model"):
     with st.spinner("Downloading... Please wait!"):
         download_dir(local_path, s3_prefix)
-
-
-st.title("Sentiment ML Model")
 
 text = st.text_area("Enter Your Review", "Type...")
 predict = st.button("Predict")
