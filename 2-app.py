@@ -16,6 +16,7 @@ s3_prefix = 'ml-models/tinybert-sentiment-analysis/'
 
 s3 = boto3.client('s3')
 def download_dir(local_path, s3_prefix):
+    button_placeholder.empty()
     os.makedirs(local_path, exist_ok=True)
     paginator = s3.get_paginator('list_objects_v2')
     for result in paginator.paginate(Bucket=bucket_name, Prefix=s3_prefix):
