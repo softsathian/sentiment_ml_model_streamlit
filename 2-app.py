@@ -17,6 +17,8 @@ s3_prefix = 'ml-models/tinybert-sentiment-analysis/'
 hide_icons = """
 <style>
 #MainMenu {visibility: hidden;}
+#iconButtonLabel {visibility: hidden;}
+.st-emotion-cache-1wbqy5l {visibility: hidden;}
 </style>
 """
 st.markdown(hide_icons, unsafe_allow_html=True)
