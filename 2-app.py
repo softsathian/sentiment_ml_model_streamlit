@@ -29,12 +29,12 @@ def download_dir(local_path, s3_prefix):
                 s3.download_file(bucket_name, s3_key, local_file)
 
 
-st.title("Machine Learning Model Deployment at the Server!!!")
+st.title("Sentiment ML Model")
 
-button = st.button("Download Model")
-if button:
-    with st.spinner("Downloading... Please wait!"):
-        download_dir(local_path, s3_prefix)
+# button = st.button("Download Model")
+# if button:
+#     with st.spinner("Downloading... Please wait!"):
+#         download_dir(local_path, s3_prefix)
 
 
 text = st.text_area("Enter Your Review", "Type...")
