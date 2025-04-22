@@ -14,6 +14,14 @@ bucket_name = "sathianmlbucket1"
 local_path = 'tinybert-sentiment-analysis'
 s3_prefix = 'ml-models/tinybert-sentiment-analysis/'
 
+hide_icons = """
+<style>
+#MainMenu {visibility: hidden;}
+</style>
+"""
+st.markdown(hide_icons, unsafe_allow_html=True)
+
+
 s3 = boto3.client('s3')
 def download_dir(local_path, s3_prefix):
     button_placeholder.empty()
