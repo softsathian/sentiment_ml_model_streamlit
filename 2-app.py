@@ -30,7 +30,6 @@ def download_dir(local_path, s3_prefix):
                 s3.download_file(bucket_name, s3_key, local_file)
 
 
-<<<<<<< HEAD
 st.title("ML Model Deployment at the Server!!!")
 
 
