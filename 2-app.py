@@ -30,16 +30,20 @@ def download_dir(local_path, s3_prefix):
                 s3.download_file(bucket_name, s3_key, local_file)
 
 
-st.title("Machine Learning Model Deployment at the Server!!!")
+st.title("ML Model Deployment at the Server!!!")
 
-button = st.button("Download Model")
-if button:
+
+button_placeholder = st.empty()
+
+if button_placeholder.button("Download Model"):
     with st.spinner("Downloading... Please wait!"):
         download_dir(local_path, s3_prefix)
+         # Remove the button after download
 
 
 text = st.text_area("Enter Your Review", "Type...")
 predict = st.button("Predict")
+
 
 
 device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
